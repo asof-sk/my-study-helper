@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+    <h2>Study Hub</h2>
+
+<nav>
+    <button class="nav-btn active" data-page="home">Home</button>
+    <button class="nav-btn" data-page="tasks">Today's Tasks</button>
+    <button class="nav-btn" data-page="timer">Timer</button>
+    <button class="nav-btn" data-page="backlog">Backlog</button>
+    <button class="nav-btn" data-page="notes">Important Notes</button>
+    <button class="nav-btn" data-page="settings">Settings</button>
+</nav>
+
+</div>
+
+<main class="main-content">
+
+<!-- HOME PAGE -->
+<section class="page active" id="home">
+
+    <header>
+        <h1>Your Dashboard</h1>
+        <p>A little progress every day.</p>
+    </header>
+
+    <!-- Today's Tasks -->
+    <section class="tasks-section">
+    <h2>Today's Tasks</h2>
+
+    <div class="task-container" id="dashboardTaskList">
+    </div>
+    </section>
+
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+
+        <section class="bottom-column">
+            <h2>Study Time Today</h2>
+
+            <div class="bottom-box timer-box">
+                <h3 id="dashboardTime">00h 00m 00s</h3>
+            </div>
+        </section>
+
+
+        <section class="bottom-column">
+            <h2>Backlog</h2>
+
+            <div class="bottom-box backlog-box">
+                <ol id="dashboardBacklogList"></ol>
+            </div>
+        </section>
+
+
+        <section class="bottom-column">
+            <h2>Important Notes</h2>
+
+            <div class="bottom-box notes-box">
+                <ol id="dashboardNotesList"></ol>
+            </div>
+        </section>
+
+    </div>
+
+</section>
+
+
+<!-- TIMER PAGE -->
+<section class="page" id="timer">
+
+    <header>
+        <h1>Study Timer</h1>
+        <p>Track your study time.</p>
+    </header>
+
+    <div class="main-timer-box">
+
+        <h2 id="timerDisplay">00h 00m 00s</h2>
+
+        <div class="timer-buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- TASK PAGE -->
+<section class="page" id="tasks">
+
+    <header>
+        <h1>Today's Tasks</h1>
+        <p>Organize your daily study tasks.</p>
+    </header>
+
+    <div class="management-box">
+
+        <input type="text" id="taskChapter" placeholder="Enter subject name">
+
+        <input type="text" id="taskTopic" placeholder="Enter topic">
+
+        <button id="addTask">Add Task</button>
+
+        <div id="taskManagementList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- BACKLOG PAGE -->
+<section class="page" id="backlog">
+
+    <header>
+        <h1>Backlog</h1>
+        <p>Manage your pending topics.</p>
+    </header>
+
+    <div class="management-box">
+
+        <input type="text" id="backlogInput"
+               placeholder="Enter a pending topic">
+
+        <button id="addBacklog">Add Topic</button>
+
+        <div id="backlogList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- IMPORTANT NOTES PAGE -->
+<section class="page" id="notes">
+    <header>
+        <h1>Important Notes</h1>
+        <p>Keep your important formulas and reminders here.</p>
+    </header>
+
+<div class="management-box">
+    <input type="text" id="noteTitle" placeholder="Enter topic">
+    <input type="text" id="noteContent" placeholder="Enter formula or short reminder">
+    <button id="addNote">Add Note</button>
+
+    <div id="notesList"></div>
+</div>
+
+</section>
+
+
+<!-- SETTINGS PAGE -->
+<section class="page" id="settings">
+
+    <header>
+        <h1>Settings</h1>
+        <p>Customize your Study Hub.</p>
+    </header>
+
+</section>
+
+</main>
+
+<!-- Floating Timer -->
+
+<button id="floatingTimer" class="floating-timer">
+    00h 00m 00s
+</button>
+
+<script src="scripting.js"></script>
+
+</body>
+</html>
